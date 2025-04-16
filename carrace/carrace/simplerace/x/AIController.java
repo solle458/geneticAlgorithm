@@ -28,7 +28,7 @@ public class AIController implements Controller, Constants {
 
     public AIController() {
         this(new double[] {
-            1.2836665031146275, 3.702209323899995, 3.962904078280526, 3.369374043946777, 3.9587972942198943, 3.8303847952224532, 3.6014974915745492
+            0.02592465205173912, 2.504573860515502, 7.500158279607684, 1.5151653526050495, 1.8108301330546541, 1.8866872849682035, 1.453181859216571
         });
     }
 
@@ -64,20 +64,20 @@ public class AIController implements Controller, Constants {
             if (speed < maxSpeed) {
                 command = "Accelerate";
             } else {
-                command = "keep";
+                command = "brake";
             }
         }else{
             if (angle > 0) {
-                if (Math.abs(angle) < angleThreshold + 5) {
-                    command = "leftAccelerate";
-                } else {
+                if (speed > minSpeed) {
                     command = "left";
+                } else {
+                    command = "leftAccelerate";
                 }
             } else {
-                if (Math.abs(angle) < angleThreshold + 5) {
-                    command = "rightAccelerate";
-                } else {
+                if (speed > minSpeed) {
                     command = "right";
+                } else {
+                    command = "rightAccelerate";
                 }
             }
         }

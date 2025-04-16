@@ -14,9 +14,9 @@ public class GA {
         double[][] population = new double[POP_SIZE][GENE_SIZE];
 
         for (int i = 0; i < POP_SIZE; i++) {
-            population[i][0] = 1.0 + random.nextDouble() * 0.4;
-            population[i][1] = 1.0 + random.nextDouble() * 5.0;
-            population[i][2] = 1.0 + random.nextDouble() * 5.0;
+            population[i][0] = random.nextDouble() * 0.4;
+            population[i][1] = 1.0 + random.nextDouble() * 3.0;
+            population[i][2] = 1.0 + random.nextDouble() * 10.0;
             population[i][3] = 1.0 + random.nextDouble() * 2.0;
             population[i][4] = 1.0 + random.nextDouble() * 2.0;
             population[i][5] = 1.0 + random.nextDouble() * 2.0;
