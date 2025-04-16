@@ -1,0 +1,6 @@
+javac simplerace/x/AIController.java
+java simplerace.Stats simplerace.x.AIController
+java simplerace.Play simplerace.x.AIController
+
+javac -cp . simplerace/x/*.java
+java -cp . simplerace.x.GA
