@@ -1,12 +1,15 @@
 package simplerace.x;
 
 import simplerace.*;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class GA {
     static final int POP_SIZE = 30;
     static final int GENE_SIZE = 7;
-    static final int GENERATIONS = 250000;
+    static final int GENERATIONS = 10000;
     static final double MUTATION_RATE = 0.1;
 
     public static void main(String[] args) {
@@ -45,7 +48,11 @@ public class GA {
             }
 
             population = newPop;
-            // System.out.printf("Generation %d: Best fitness = %.4f%n", gen, bestFitness);
+            if (gen % (GENERATIONS / 10) == 0) {
+                System.out.println(gen*100 / GENERATIONS + "%");
+                LocalDateTime nowDate = LocalDateTime.now();
+                System.out.println(nowDate);
+            }
         }
 
         System.out.println("Best genome: " + Arrays.toString(bestGenome));
