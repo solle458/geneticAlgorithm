@@ -9,7 +9,7 @@ import java.util.*;
 public class GA {
     static final int POP_SIZE = 30;
     static final int GENE_SIZE = 7;
-    static final int GENERATIONS = 600000;
+    static final int GENERATIONS = 100000;
     static final double MUTATION_RATE = 0.1;
 
     public static void main(String[] args) {
