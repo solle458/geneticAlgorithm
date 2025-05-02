@@ -17,7 +17,10 @@
 ```bash
 cd /carrace/carrace
 javac -cp . simplerace/x/*.java
-java -cp . simplerace.x.GA//パラメータの学習
-java simplerace.Play simplerace.x.AIController//シミュレーションの実行
-java simplerace.Stats simplerace.x.AIController//10000回シミュレーションした結果を出力
+#パラメータの学習
+java -cp . simplerace.x.GA
+#シミュレーションの実行
+java simplerace.Play simplerace.x.AIController
+#10000回シミュレーションした結果を出力
+java simplerace.Stats simplerace.x.AIController
 ```
